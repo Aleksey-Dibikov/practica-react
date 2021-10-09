@@ -36,7 +36,7 @@ class App extends Component {
         <ColorPicker options={colorPickerOptions} />
 
         <div>
-          <div>
+          <div className="TodoList">
             <p>Общее кол-во: {totalTodoCount}</p>
             <p>Кол-во выполненных: {completedTodoCount}</p>
           </div>
