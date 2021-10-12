@@ -4,6 +4,7 @@ import Counter from './components/Counter';
 import Dropdown from './components/Dropdown';
 import ColorPicker from './components/ColorPicker';
 import TodoList from './components/TodoList';
+import Form from './components/Form/Form';
 import colorPickerOptions from './colorPickerOptions.json';
 import initialTodos from './todos.json';
 
@@ -28,21 +29,25 @@ class App extends Component {
     );
 
     return (
-      <div className="App">
-        <Counter initialValue={0} />
+      <>
+        <Form />
 
-        <Dropdown />
+        {/* <div className="App">
+                          <Counter initialValue={0} />
 
-        <ColorPicker options={colorPickerOptions} />
+                          <Dropdown />
 
-        <div>
-          <div className="TodoList">
-            <p>Общее кол-во: {totalTodoCount}</p>
-            <p>Кол-во выполненных: {completedTodoCount}</p>
-          </div>
-          <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
-        </div>
-      </div>
+                          <ColorPicker options={colorPickerOptions} />
+
+                          <div>
+                            <div className="TodoList">
+                              <p>Общее кол-во: {totalTodoCount}</p>
+                              <p>Кол-во выполненных: {completedTodoCount}</p>
+                            </div>
+                            <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+                          </div>
+                        </div> */}
+      </>
     );
   }
 }
