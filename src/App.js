@@ -30,23 +30,22 @@ class App extends Component {
 
     return (
       <>
+        <div className="App">
+          <Counter initialValue={0} />
+
+          <Dropdown />
+
+          <ColorPicker options={colorPickerOptions} />
+
+          <div>
+            <div className="TodoList">
+              <p>Общее кол-во: {totalTodoCount}</p>
+              <p>Кол-во выполненных: {completedTodoCount}</p>
+            </div>
+            <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+          </div>
+        </div>
         <Form />
-
-        {/* <div className="App">
-                          <Counter initialValue={0} />
-
-                          <Dropdown />
-
-                          <ColorPicker options={colorPickerOptions} />
-
-                          <div>
-                            <div className="TodoList">
-                              <p>Общее кол-во: {totalTodoCount}</p>
-                              <p>Кол-во выполненных: {completedTodoCount}</p>
-                            </div>
-                            <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
-                          </div>
-                        </div> */}
       </>
     );
   }
